@@ -1,0 +1,39 @@
+.clients-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition: fill var(--duration) var(--timing-function),
+    border-color var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: $color-accent;
+    border-color: $color-accent;
+  }
+}
+
+.clients-item {
+  width: calc((100% - 60px) / 2);
+
+  @include tablet {
+    width: calc((100% - 90px) / 3);
+  }
+
+  @include desktop {
+    width: calc((100% - 180px) / 6);
+  }
+}

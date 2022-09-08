@@ -1,0 +1,51 @@
+.advantage-icon-wrap {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  margin-bottom: var(--margin30);
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5f4fa;
+}
+
+.advantage-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  color: $color-dark;
+  text-align: center;
+  // text-align: left;
+  text-transform: uppercase;
+}
+
+// .advantage__item:not(:last-child) {
+//   margin-right: var(--margin30);
+// }
+
+.advantage-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $bgc-light-grey;
+}
+
+.advantage__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.advantage__item {
+  @include tablet {
+    width: calc(50% - 30px);
+  }
+
+  @include desktop {
+    width: calc(25% - 30px);
+  }
+}

@@ -17,25 +17,12 @@
     display: flex;
     column-gap: 70px;
   }
-
-  // @media screen and (min-width: 1200px) {
-  //   display: flex;
-  //   column-gap: 70px;
-  // }
 }
-
-// .footer-wrap {
-//   @include tablet {
-//     display: flex;
-//     justify-content: space-around;
-//   }
-// }
 
 .footer-thumb {
   display: flex;
-  @include mobile {
-    flex-direction: column;
-  }
+  flex-direction: column;
+
   @include tablet {
     flex-direction: row;
   }
@@ -61,10 +48,6 @@
     align-items: start;
     margin-right: 70px;
   }
-
-  // @media screen and (min-width: 1200px) {
-  //   margin-right: 70px;
-  // }
 }
 
 .address__list {
@@ -109,6 +92,7 @@
 
 .title-footer {
   margin-bottom: 20px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -132,10 +116,18 @@
   fill: $color-light;
 }
 
+.input-footer-wrap {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
 .input-footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 12px;
   @include desktop {
     align-items: start;
@@ -144,15 +136,19 @@
 }
 
 .input-footer input {
-  width: 358px;
+  max-width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
-  @media screen and(max-width:479px) {
+  @media screen and(max-width:1199px) {
+    width: 450px;
     margin-bottom: 20px;
+  }
+  @include desktop {
+    width: 358px;
   }
 
   font-family: 'Roboto';
@@ -167,14 +163,8 @@
 .input-btn {
   padding-left: 28px;
   padding-right: 28px;
-  @include tablet {
+  @include desktop {
     margin-left: 12px;
-  }
-}
-
-.input-footer-wrap {
-  @include tablet {
-    display: flex;
   }
 }
 

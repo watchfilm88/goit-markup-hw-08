@@ -45,10 +45,19 @@
 }
 
 .card-set__item {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    // flex-basis: calc(100% / 3 - 30px);
+  // @include mobile {
+  //   width: calc((100% - 30px) / 2);
+  // }
+  @include tablet {
     width: calc((100% - 30px) / 2);
   }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
+
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   width: calc((100% - 30px) / 2);
+  // }
 }
 
 .portfolio-card-link {

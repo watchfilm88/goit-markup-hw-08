@@ -33,16 +33,70 @@
               aria-label="переключатель мобильного меню"
             >
               <use href="./images/symbol-defs.svg#icon-menu" class="icon-menu"></use>
-              <use href="./images/symbol-defs.svg#icon-close-cross" class="icon-cross"></use>
             </svg>
           </button>
+          <div class="mob-menu is-hidden" data-menu>
+            <nav class="mob-menu__navigation">
+              <button type="button" class="menu-btn-close menu-btn" data-menu-close>
+                <svg
+                  class="icon-header-menu"
+                  height="40"
+                  width="40"
+                  aria-label="переключатель мобильного меню"
+                >
+                  <use href="./images/symbol-defs.svg#icon-menu" class="icon-mob-menu"></use>
+                  <use
+                    href="./images/symbol-defs.svg#icon-close-cross"
+                    class="icon-mob-cross"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="mob-menu__site-navigation list">
+                <li class="mob-menu__item-nav">
+                  <a href="./index.html" class="site-navigation__link link">Студия</a>
+                </li>
+                <li class="mob-menu__item-nav">
+                  <a href="./portfolio.html" class="site-navigation__link link current"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mob-menu__item-nav">
+                  <a href="#contacts" class="site-navigation__link link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="menu-auth-thumb">
+              <ul class="list mob-menu__auth-navigation">
+                <li class="mob-menu___item-auth">
+                  <a href="tel:+380961111111" class="auth-tel link"> +380961111111</a>
+                </li>
+                <li class="mob-menu___item-auth">
+                  <a href="mailto:info@devstudio.com" class="auth-mail link"> info@devstudio.com</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="mob-menu-soc list">
+              <li class="mob-soc-item">
+                <a href="" class="mob-menu-soc-list__link link"> Instagram </a>
+              </li>
+              <li class="mob-soc-item">
+                <a href="" class="mob-menu-soc-list__link link"> Twitter </a>
+              </li>
+              <li class="mob-soc-item">
+                <a href="" class="mob-menu-soc-list__link link"> Facebook </a>
+              </li>
+              <li class="mob-soc-item">
+                <a href="" class="mob-menu-soc-list__link link"> Linkedin </a>
+              </li>
+            </ul>
+          </div>
 
           <ul class="site-navigation list">
             <li class="site-navigation__item">
-              <a href="./index.html" class="site-navigation__link link current">Студия</a>
+              <a href="./index.html" class="site-navigation__link link">Студия</a>
             </li>
             <li class="site-navigation__item">
-              <a href="./portfolio.html" class="site-navigation__link link">Портфолио</a>
+              <a href="./portfolio.html" class="site-navigation__link link current">Портфолио</a>
             </li>
             <li class="site-navigation__item">
               <a href="#contacts" class="site-navigation__link link">Контакты</a>
@@ -65,56 +119,6 @@
               </svg>
               +380961111111</a
             >
-          </li>
-        </ul>
-      </div>
-      <div class="mob-menu is-hidden" data-menu>
-        <nav class="mob-menu__navigation">
-          <button type="button" class="menu-btn-close menu-btn" data-menu-close>
-            <svg
-              class="icon-header-menu"
-              height="40"
-              width="40"
-              aria-label="переключатель мобильного меню"
-            >
-              <use href="./images/symbol-defs.svg#icon-menu" class="icon-menu"></use>
-              <use href="./images/symbol-defs.svg#icon-close-cross" class="icon-cross"></use>
-            </svg>
-          </button>
-          <ul class="mob-menu__site-navigation list">
-            <li class="mob-menu__item-nav">
-              <a href="./index.html" class="site-navigation__link link current">Студия</a>
-            </li>
-            <li class="mob-menu__item-nav">
-              <a href="./portfolio.html" class="site-navigation__link link">Портфолио</a>
-            </li>
-            <li class="mob-menu__item-nav">
-              <a href="#contacts" class="site-navigation__link link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="menu-auth-thumb">
-          <ul class="list mob-menu__auth-navigation">
-            <li class="mob-menu___item-auth">
-              <a href="tel:+380961111111" class="auth-tel link"> +380961111111</a>
-            </li>
-            <li class="mob-menu___item-auth">
-              <a href="mailto:info@devstudio.com" class="auth-mail link"> info@devstudio.com</a>
-            </li>
-          </ul>
-        </div>
-        <ul class="mob-menu-soc list">
-          <li class="mob-soc-item">
-            <a href="" class="mob-menu-soc-list__link link"> Instagram </a>
-          </li>
-          <li class="mob-soc-item">
-            <a href="" class="mob-menu-soc-list__link link"> Twitter </a>
-          </li>
-          <li class="mob-soc-item">
-            <a href="" class="mob-menu-soc-list__link link"> Facebook </a>
-          </li>
-          <li class="mob-soc-item">
-            <a href="" class="mob-menu-soc-list__link link"> Linkedin </a>
           </li>
         </ul>
       </div>
@@ -598,5 +602,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

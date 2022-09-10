@@ -6,10 +6,6 @@
   @include tablet {
     justify-content: center;
   }
-
-  // @media screen and (min-width: 768px) {
-  //   justify-content: center;
-  // }
 }
 
 .porftolio-btn {
@@ -45,19 +41,12 @@
 }
 
 .card-set__item {
-  // @include mobile {
-  //   width: calc((100% - 30px) / 2);
-  // }
   @include tablet {
     width: calc((100% - 30px) / 2);
   }
   @include desktop {
     width: calc((100% - 60px) / 3);
   }
-
-  // @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //   width: calc((100% - 30px) / 2);
-  // }
 }
 
 .portfolio-card-link {
@@ -90,7 +79,7 @@
   height: 100%;
   padding: 63px 24px;
   transform: translateY(101%);
-  transition: transform var(--duration) var(--timing-function);
+  transition: transform $duration $timing-function;
 
   font-size: 18px;
   line-height: 1.56;
@@ -105,5 +94,5 @@
 }
 
 .portfolio-card-link .link {
-  transition: box-shadow var(--duration) var(--timing-function);
+  transition: box-shadow $duration $timing-function;
 }

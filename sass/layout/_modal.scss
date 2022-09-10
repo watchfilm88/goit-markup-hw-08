@@ -7,8 +7,7 @@
   padding-left: 15px;
   padding-right: 15px;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity var(--duration) var(--timing-function),
-    visibility var(--duration) var(--timing-function);
+  transition: opacity $duration $timing-function, visibility $duration $timing-function;
 }
 
 .modal {
@@ -18,11 +17,10 @@
   transform: translate(-50%, -50%);
   max-width: 528px;
   width: 100%;
-  // height: 581px;
   padding: 40px;
 
   border-radius: 4px;
-  transition: transform var(--duration) var(--timing-function);
+  transition: transform $duration $timing-function;
   background-color: $color-light;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -30,6 +28,16 @@
   @include desktop {
     position: absolute;
   }
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-80%, -80%) rotate(180deg) scale(0);
 }
 
 .modal-form {
@@ -149,9 +157,8 @@
   transform: translateY(-50%);
   border: 2px solid $color-dark;
   border-radius: 2px;
-  transition: fill var(--duration) var(--timing-function),
-    background-color var(--duration) var(--timing-function),
-    border-color var(--duration) var(--timing-function);
+  transition: fill $duration $timing-function, background-color $duration $timing-function,
+    border-color $duration $timing-function;
   fill: $color-light;
 }
 
@@ -177,7 +184,7 @@
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
-  transition: box-shadow var(--duration) var(--timing-function);
+  transition: box-shadow $duration $timing-function;
 
   color: $color-light;
   background: $color-accent;
@@ -208,22 +215,8 @@
   }
 }
 
-// .modal .input-btn {
-//   margin-left: 0;
-// }
-
 .icon-cross {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-80%, -80%) rotate(180deg) scale(0);
 }

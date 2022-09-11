@@ -76,6 +76,20 @@
   }
 }
 
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $color-dark;
+
+  @include desktop {
+    font-size: 36px;
+  }
+}
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;

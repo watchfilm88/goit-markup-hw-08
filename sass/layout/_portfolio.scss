@@ -1,7 +1,13 @@
+.section-portfolio {
+  @include desktop {
+    padding-top: 94px;
+  }
+}
+
 .porftolio-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   gap: 15px 8px;
   @include tablet {
     justify-content: center;
@@ -13,6 +19,8 @@
   border-radius: 4px;
   &:hover,
   &:focus {
+    background-color: $color-light;
+    color: $color-accent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
@@ -51,6 +59,11 @@
 
 .portfolio-card-link {
   display: block;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .portfolio-card-link:hover,
@@ -60,6 +73,7 @@
 }
 
 .card-set .card-text {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;

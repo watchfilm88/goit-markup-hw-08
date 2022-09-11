@@ -18,11 +18,11 @@
   color: $color-dark;
   text-align: center;
   text-transform: uppercase;
-}
 
-// .advantage__item:not(:last-child) {
-//   margin-right: var(--margin30);
-// }
+  @include desktop {
+    text-align: start;
+  }
+}
 
 .advantage-text {
   font-size: 14px;
